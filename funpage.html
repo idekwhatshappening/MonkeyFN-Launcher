@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fun Web Page</title>
+    <style>
+        button {
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            transition: all 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Catch Me If You Can!</h1>
+    <button onclick="alert('You got me!')">Click Me!</button>
+
+    <script>
+        document.querySelector('button').addEventListener('mouseover', function() {
+            this.style.top = Math.random() * window.innerHeight + 'px';
+            this.style.left = Math.random() * window.innerWidth + 'px';
+        });
+    </script>
+</body>
+</html>
